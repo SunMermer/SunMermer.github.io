@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best phone retailer offering the latest smartphones at unbeatable prices.">
+    <title>Phone World | Your Trusted Phone Retailer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #0078d7;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #005a9e;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-image: url('https://via.placeholder.com/1920x600');
+            background-size: cover;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .features div {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(33% - 40px);
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Phone World</h1>
+        <p>Your Trusted Destination for the Latest Smartphones</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section class="hero">
+        <h1>Discover the Best Deals on Smartphones</h1>
+        <p>Shop the latest models with unbeatable prices and fast delivery.</p>
+    </section>
+    <section class="features">
+        <div>
+            <h2>Wide Selection</h2>
+            <p>Find phones from top brands like Apple, Samsung, and more.</p>
+        </div>
+        <div>
+            <h2>Competitive Prices</h2>
+            <p>Get the best deals and offers tailored to your budget.</p>
+        </div>
+        <div>
+            <h2>Fast Shipping</h2>
+            <p>Receive your new phone quickly with our reliable delivery options.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Phone World. All rights reserved.</p>
+        <p>Follow us on <a href="#" style="color: #0078d7;">Social Media</a></p>
+    </footer>
+</body>
+</html>

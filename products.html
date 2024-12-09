@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Phone World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #0078d7;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #005a9e;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product-card h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        .product-card p {
+            color: #0078d7;
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Products</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <section class="products">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Product 1">
+            <h3>iPhone 15</h3>
+            <p>$999</p>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Product 2">
+            <h3>Samsung Galaxy S23</h3>
+            <p>$899</p>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/300x200" alt="Product 3">
+            <h3>Google Pixel 8</h3>
+            <p>$799</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Phone World. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -151,10 +151,8 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Check local storage for existing element
-        const savedElement = localStorage.getItem("createdElement");
 
-        // If there is an element saved, create it
+        const savedElement = localStorage.getItem("createdElement");
         if (savedElement) {
             const existingElement = document.createElement("div");
             existingElement.id = "button_clicked";
@@ -162,21 +160,15 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
             document.getElementById("container").appendChild(existingElement);
         }
 
-        // Click event for the button
         document.getElementById("feedback_button").onclick = function() {
-            // Create a new element
             const newElement = document.createElement("div");
             newElement.id = "button_clicked";
             const content = "This is the new element created after clicking the button.";
-            newElement.innerHTML = content; // Set content for the new element
-
-            // Append the new element to the container
+            newElement.innerHTML = content; 
             document.getElementById("container").appendChild(newElement);
             
-            // Save the content to local storage
             localStorage.setItem("createdElement", content);
-            
-            // Optionally, reload the page if desired
+        
             location.reload(); // This will refresh the page
         };
     });

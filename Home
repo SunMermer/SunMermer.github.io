@@ -1,468 +1,134 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-	
-	
 <head>
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5XDQDK3');</script>
-<!-- End Google Tag Manager -->
-	
-<meta charset="utf-8">
-<title>Walker - Digital CX (DCX) Demo</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-<!-- Le styles -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/camera.css" rel="stylesheet">
-<link href="css/icons.css" rel="stylesheet">
-<link href="css/skin-orange.css" rel="stylesheet">
-
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-    <![endif]-->
-<!-- Fav and touch icons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href="img/ico/favicon.png">
-
-	
-</head>	
-	
-<body class="boxed">
-	
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XDQDK3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<div class="body">
-	<!-- Navigation -->
-	
-<header>
-	<div class="container clearfix">
-		<div class="row">
-			<div class="col-md-12">
-
-				<h1 class="brandlogo"><a href="index.php"><img src="img/logo.png" alt="Walker logo"></a></h1>
-
-				<div class="infoaddress"><img src="img/QualtricsXM_RBG.png" style="height: 30px; margin-right: 5px;" alt="Qualtrics"/> Digital CX Demo</div>
-
-				<div class="clearfix">
-				</div>
-				<div class="row-nav navbar">
-					<div class="navbar-inner">
-						<ul id="nav" class="nav">
-							<li &nbsp;><a href="index.php">Home</a></li>
-							<li class="divider-vertical"></li>
-							
-<li class='dropdown'><a href="#" class="dropdown-toggle" data-toggle="dropdown">Use Cases <b class="caret"></b></a>
-							<ul class="dropdown-menu js-activated" style="display: none;">
-								<li><a href="uc-site-experience.php">Overall Site Experience</a></li>
-								<li><a href="uc-persistent-feedback.php">Persistent Feedback</a></li>
-								<li><a href="uc-embedded-feedback.php">Embedded Feedback</a></li>
-								<li><a href="uc-site-abandonment.php">Site Abandonment</a></li>
-								<li><a href="uc-cart-abandonment.php">Cart Abandonment</a></li>
-								<li><a href="uc-post-transaction.php">Post Transaction</a></li>
-								<li><a href="uc-mobile-experience.php">Mobile App Experience</a></li>
-							</ul>
-							</li>
-
-							<li class="divider-vertical"></li>
-							
-							<li class='dropdown active selected'><a href="creatives.php">Creatives</a></li>
-							
-							<li class="divider-vertical"></li>
-
-<li class='dropdown'><a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
-							<ul class="dropdown-menu js-activated" style="display: none;">
-								<li><a href="faq.php">Frequently Asked Questions</a></li>
-								<li><a href="glossary.php">Digital CX Glossary</a></li>								<li><a href="dx-sample-size.php">Digital Sample Size Calculator</a></li>
-							</ul>
-							</li>
-							
-							<li class="divider-vertical"></li>
-							<li &nbsp;><a href="contact.php">Contact Us</a></li>
-							<li class="divider-vertical"></li>
-							
-							
-							
-	
-					
-						</ul>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</header>	
-	<div class="text-center">
-		<img src="img/sha.png" class="slidershadow" alt="">
-	</div>
-	<!-- /end header -->
-	<div class="container">
-		<div class="page-header">
-			<h1>CREATIVES</h1>
-			<p style="margin-top: -15px;">The creative is what will actually display on your site. For the most part, your creative will either display your embedded target or link out to your target.</p>
-			<div class="headerdivider"></div>
-		</div>
-		
-		
-		
-		
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best phone retailer offering the latest smartphones at unbeatable prices.">
+    <title>Phone World | Your Trusted Phone Retailer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #0078d7;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #005a9e;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-image: url('https://via.placeholder.com/1920x600');
+            background-size: cover;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .features div {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(33% - 40px);
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
 
 
+<!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
 
-		<h3 style="padding-bottom: 5px; margin-top: -5px; color: #58B0E3; font-size: 20px;">Recommended Creatives</h3>
-		<div class="headerdivider"></div>		
-		
-		<div id="content" class="top30">
-			
+<script type='text/javascript'>
 
-			
-			<div class="boxportfolio4">
-				<div class="inneritem">
-			      <p><img src="img/creatives/creative-responsive-dialog.png" alt=""/></p>
-			      <h4>Responsive Dialog</h4>
-			      <p style="height: 220px;">The Responsive Dialog is a dialog box overlayed on top of your page that adjusts to the size of the viewer's device.
-					  <br />
-					  <a href="creatives.php?responsivedialog" class="btn btn-primary top10" style="height: 30px; padding: 5px 15px;"><i class="icon-chevron-sign-right"></i> &nbsp;View Example</a><br />
-					  <a href="creatives.php?responsiveembeddialog" class="btn btn-primary top10" style="height: 30px; padding: 5px 15px;"><i class="icon-chevron-sign-right"></i> &nbsp;View Embedded Survey</a>
-					
-					  <br />
-				    <a href="https://www.qualtrics.com/support/website-app-feedback/creatives-tab/creative-types/responsive-dialog-creative/" target="_blank" class="btn btn-default" style="padding: 0 10px; margin-top: 10px;"><img src="img/xm.svg" alt="XM" height="12" style="padding-right: 5px;"/> <span style="padding-top: 5px; font-size: 12px;">Support</span></a>
-					</p>
-				</div>
-			</div>
-			<div class="boxportfolio4">
-				<div class="inneritem" style="min-height: 200px;">
-				  <p><img src="img/creatives/creative-feedback.png" alt=""/></p>
-				  	<h4>Feedback Button</h4>
-					<p style="height: 220px;">The Feedback Button is a mobile responsive icon that helps capture page-level feedback.
-					
-					  <br />
-					  <a href="creatives.php?feedbackbutton" class="btn btn-primary top10" style="height: 30px; padding: 5px 15px;"><i class="icon-chevron-sign-right"></i> &nbsp;View Button Example</a>
-						
-					  <br />
-					  <a href="creatives.php" class="btn btn-primary top10" style="height: 30px; padding: 5px 15px;"><i class="icon-chevron-sign-right"></i> &nbsp;View Slider Example</a>
-						
-					  <br />
-				    <a href="https://www.qualtrics.com/support/website-app-feedback/creatives-tab/creative-types/feedback-tab-creative/" target="_blank" class="btn btn-default" style="padding: 0 10px; margin-top: 10px;"><img src="img/xm.svg" alt="XM" height="12" style="padding-right: 5px;"/> <span style="padding-top: 5px; font-size: 12px;">Support</span></a>
-					</p>
-				</div>
-			</div>
-			<div class="boxportfolio4">
-				<div class="inneritem">
-					 <p><img src="img/creatives/creative-info-bar.png" alt=""/></p>
-					 <h4>Info Bar</h4>
-					 <p style="height: 220px;">The Info Bar is an animated banner that drops down from the top of the browser or pops up from the bottom. It can overlay your web content or be inserted directly into your site.
-					  <br />
-					  <a href="creatives.php?infobar" class="btn btn-primary top10" style="height: 30px; padding: 5px 15px;"><i class="icon-chevron-sign-right"></i> &nbsp;View Example</a>
-						 
-					  <br />
-				    <a href="https://www.qualtrics.com/support/website-app-feedback/creatives-tab/creative-types/info-bar-creative/" target="_blank" class="btn btn-default" style="padding: 0 10px; margin-top: 10px;"><img src="img/xm.svg" alt="XM" height="12" style="padding-right: 5px;"/> <span style="padding-top: 5px; font-size: 12px;">Support</span></a>
-					</p>
-				</div>
-			</div>
-			<div class="boxportfolio4">
-				<div class="inneritem">
-					 <p><img src="img/creatives/creative-pop-under.png" alt=""/></p>
-					 <h4>Pop Under</h4>
-					 <p style="height: 220px;">The Pop Under is a new browsing window that appears behind the current window until the visitor leaves the site, at which point it pops forward and initiates the intercept.
-					
-					  <br />
-					  <a href="creatives.php?popunder" class="btn btn-primary top10" style="height: 30px; padding: 5px 15px;"><i class="icon-chevron-sign-right"></i> &nbsp;View  Example</a>
-						 
-					  <br />
-				    <a href="https://www.qualtrics.com/support/website-app-feedback/creatives-tab/creative-types/pop-under-creative/" target="_blank" class="btn btn-default" style="padding: 0 10px; margin-top: 10px;"><img src="img/xm.svg" alt="XM" height="12" style="padding-right: 5px;"/> <span style="padding-top: 5px; font-size: 12px;">Support</span></a>
-					</p>
-				</div>
-			</div>
-		</div>
+(function(){var g=function(e,h,f,g){
 
-				
-			
-		<div style="clear: both;" class="headerdivider"></div>	
-		<h3 style="padding-bottom: 5px; margin-top: -5px; color: #58B0E3; font-size: 20px;">Other Creatives</h3>
-		<div class="headerdivider"></div>
-			
-		<div id="content" class="top30">
-			
-			<div class="boxportfolio4">
-				<div class="inneritem">
-					 <p><img src="img/creatives/creative-custom-html.png" alt=""/></p>
-					 <h4>Custom HTML</h4>
-					 <p style="height: 220px;">As the most flexible creative, Custom HTML allows you to build out custom content to appear anywhere within your web page.
-						 
-					  <br />
-					  <a href="creatives.php?customhtml=1" class="btn btn-primary top10" style="height: 30px; padding: 5px 15px;"><i class="icon-chevron-sign-right"></i> &nbsp;View Examples</a>
+this.get=function(a){for(var a=a+"=",c=document.cookie.split(";"),b=0,e=c.length;b<e;b++){for(var d=c[b];" "==d.charAt(0);)d=d.substring(1,d.length);if(0==d.indexOf(a))return d.substring(a.length,d.length)}return null};
 
-						 
-					  <br />
-				    <a href="https://www.qualtrics.com/support/website-app-feedback/creatives-tab/creative-types/custom-html-creative/" target="_blank" class="btn btn-default" style="padding: 0 10px; margin-top: 10px;"><img src="img/xm.svg" alt="XM" height="12" style="padding-right: 5px;"/> <span style="padding-top: 5px; font-size: 12px;">Support</span></a></p>
-				</div>
-			</div>
-			<div class="boxportfolio4">
-				<div class="inneritem">
-					 <p><img src="img/creatives/creative-embedded-link.png" alt=""/></p>
-					 <h4>Embedded Link</h4>
-					 <p style="height: 220px;">The Embedded Link allows you to place text within the body of your website that connects the visitor to a dynamic URL.
-					
-					  <br />
-					  <a href="creatives.php?EmbeddedLink=1" class="btn btn-primary top10" style="height: 30px; padding: 5px 15px;"><i class="icon-chevron-sign-right"></i> &nbsp;View Example</a>
-					
-					  <br />
-				    <a href="https://www.qualtrics.com/support/website-app-feedback/creatives-tab/creative-types/embedded-link-creative/" target="_blank" class="btn btn-default" style="padding: 0 10px; margin-top: 10px;"><img src="img/xm.svg" alt="XM" height="12" style="padding-right: 5px;"/> <span style="padding-top: 5px; font-size: 12px;">Support</span></a>					</p>
-				</div>
-			</div>
-			<div class="boxportfolio4">
-				<div class="inneritem">
-					 <p><img src="img/creatives/creative-pop-over.png" alt=""/></p>
-					 <h4>Pop Over</h4>
-					 <p style="height: 220px;">The Pop Over is an embedded window that appears within your website, overlaying your page content.
-					
-					  <br />
-					  <a href="creatives.php?popover" class="btn btn-primary top10" style="height: 30px; padding: 5px 15px;"><i class="icon-chevron-sign-right"></i> &nbsp;View  Example</a>
-						 
-					  <br />
-				    <a href="https://www.qualtrics.com/support/website-app-feedback/creatives-tab/creative-types/pop-over-creative/" target="_blank" class="btn btn-default" style="padding: 0 10px; margin-top: 10px;"><img src="img/xm.svg" alt="XM" height="12" style="padding-right: 5px;"/> <span style="padding-top: 5px; font-size: 12px;">Support</span></a>
-					</p>
-				</div>
-			</div>
-			
+this.set=function(a,c){var b="",b=new Date;b.setTime(b.getTime()+6048E5);b="; expires="+b.toGMTString();document.cookie=a+"="+c+b+"; path=/; "};
 
-			<div class="boxportfolio4">
-				<div class="inneritem">
-					 <p><img src="img/creatives/creative-slider.png" alt=""/></p>
-					 <h4>Slider</h4>
-					 <p style="height: 220px;">The Slider creative animates out of the webpage border. It can be triggered by scrolling down the page or clicking on a control.
-					
-					  <br />
-					  <a href="creatives.php?slider" class="btn btn-primary top10" style="height: 30px; padding: 5px 15px;"><i class="icon-chevron-sign-right"></i> &nbsp;View Example</a>
-						 
-					  <br />
-				    <a href="https://www.qualtrics.com/support/website-app-feedback/creatives-tab/creative-types/slider-creative/" target="_blank" class="btn btn-default" style="padding: 0 10px; margin-top: 10px;"><img src="img/xm.svg" alt="XM" height="12" style="padding-right: 5px;"/> <span style="padding-top: 5px; font-size: 12px;">Support</span></a>
-					</p>
-				</div>
-			</div>
+this.check=function(){var a=this.get(f);if(a)a=a.split(":");else if(100!=e)"v"==h&&(e=Math.random()>=e/100?0:100),a=[h,e,0],this.set(f,a.join(":"));else return!0;var c=a[1];if(100==c)return!0;switch(a[0]){case "v":return!1;case "r":return c=a[2]%Math.floor(100/c),a[2]++,this.set(f,a.join(":")),!c}return!0};
 
-		</div>	
-			
-		<div class="headerdivider"></div>	
-		<h3 style="padding-bottom: 5px; margin-top: -5px; color: #58B0E3; font-size: 20px;">Mobile App Creatives</h3>
-		<div class="headerdivider"></div>
+this.go=function(){if(this.check()){var a=document.createElement("script");a.type="text/javascript";a.src=g;document.body&&document.body.appendChild(a)}};
 
-			
-		<div id="content" class="top30">
-			
-			
-			<div class="boxportfolio4">
-				<div class="inneritem">
-					 <p><img src="img/creatives/creative-mobile-app-prompt.png" alt=""/></p>
-					 <h4>Mobile App Prompt</h4>
-					 <p style="height: 220px;">The Mobile App Prompt can be used with the in-app SDK to display a prompt inside a native mobile app.
-					
-					
-					  <br />
-					  <a href="uc-mobile-experience.php" class="btn btn-primary top10" style="height: 30px; padding: 5px 15px;"><i class="icon-chevron-sign-right"></i> &nbsp;View Example</a>
-					
-					  <br />
-				    <a href="https://www.qualtrics.com/support/website-app-feedback/creatives-tab/creative-types/mobile-app-prompt-creative/" target="_blank" class="btn btn-default" style="padding: 0 10px; margin-top: 10px;"><img src="img/xm.svg" alt="XM" height="12" style="padding-right: 5px;"/> <span style="padding-top: 5px; font-size: 12px;">Support</span></a>					</p>
-				</div>
-			</div>
-			<div class="boxportfolio4">
-				<div class="inneritem">
-					 <p><img src="img/creatives/creative-mobile-app-notification.png" alt=""/></p>
-					 <h4>Mobile Notification</h4>
-					 <p style="height: 220px;">The Mobile Notification can be used with the in-app SDK to display a native heads-up notification.
+this.start=function(){var t=this;"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",function(){t.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){t.go()}):t.go()};};
 
-					
-					  <br />
-					  <a href="uc-mobile-experience.php" class="btn btn-primary top10" style="height: 30px; padding: 5px 15px;"><i class="icon-chevron-sign-right"></i> &nbsp;View Example</a>
-						 
-					  <br />
-				    <a href="https://www.qualtrics.com/support/website-app-feedback/creatives-tab/creative-types/mobile-notification-creative/" target="_blank" class="btn btn-default" style="padding: 0 10px; margin-top: 10px;"><img src="img/xm.svg" alt="XM" height="12" style="padding-right: 5px;"/> <span style="padding-top: 5px; font-size: 12px;">Support</span></a>
-					</p>
-				</div>
-			</div>
-		</div>
-		
-		<div class="info-box shadow-large bottom0">
-					<div class="info-box-inner">
-						<div class="info-content">
-							
-						<a style="float: right; margin-left: 20px;" class="btn btn-primary btn-large" href="https://www.qualtrics.com/support/website-app-feedback/getting-started-with-website-app-feedback/step-3-building-your-creative/" target="_blank">Visit Qualtrics Support &nbsp; <i class="icon-circle-arrow-right"></i></a>
-							
-							<h4><img src="img/xm.svg" alt="XM" style="margin-right: 15px; height: 25px;"/>Support &#8212; Building Your Creative</h4>
-							<p style="margin-top: 5px;"><strong>Topics covered:</strong> Choosing a Creative Type, Designing Your Creative, Deciding How Your Creative Behaves, Testing Your Creative, and Publishing Your Creative. 
-							</p>
-					  </div>
+try{(new g(100,"r","QSI_S_ZN_2Eho8PR7RF6qaFQ","https://zn2eho8pr7rf6qafq-tamearlyaccess.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_2Eho8PR7RF6qaFQ")).start()}catch(i){}})();
 
-						<div class="clearfix">
-						</div>
-					</div>
-				</div>	
-		
-	</div>
-	<!-- FOOTER BEGIN
-================================================== -->
-	
-	<!-- FOOTER BEGIN
-================================================== -->
-	<div class="footer footerdark">
-		<div class="text-center wraptotop">
-			<a class="totop"><i class="icon-chevron-up"></i></a>
-		</div>
-		<div class="container">
-			<!-- 1st row -->
-			<div class="row">
-				<div class="col-md-4">
-					<h1 class="title">About Walker</h1>
-					<hr>
-					<p style="width: 90%">
-						 Walker is an experience management (XM) services firm. Our experts provide wide range of flexible solutions to maximize technology investments and support customer and employee experience initiatives for a wide range of organizations.<br /><br />
-					</p>
-					<p style="width: 90%"><a href="https://www.walkerinfo.com" target="_blank">
-					<img src="img/walker_2D_white.png" alt="" width="186" height="42"/><br />
-						<span style="margin-left: 53px;">www.walkerinfo.com</span></a>
-				  </p> 
-				</div>
-				<div class="col-md-4">
-					<h1 class="title">Qualtrics Partner Network</h1>
-					<hr>
-					<p style="width: 90%">
-							<a href="https://www.qualtrics.com/partnerships/walker/" target="_blank"><img src="img/QPN_Logo_white.png" alt="QPN Logo" style="width: 100px; margin: 10px 20px 10px 0; float: left;"></a>
-							
-							 Together, Walker and Qualtrics have served more than 500 clients with an unbeatable combination – world-class professional services and industry-leading experience management technology to deliver better, faster results.
-					</p>
-				</div>
-				<div class="col-md-4">
-					<h1 class="title">Questions?</h1>
-					<hr>
-					
-					<div id="footerForm"></div>
+</script><div id='ZN_2Eho8PR7RF6qaFQ'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
 
-					<dl class="faqs" style="border:0px;">
-					<dt class=""><i class="icon-question-sign" style="font-size: 18px;"></i></dt>
-					<dd style="display: none;">
-					<span style="font-weight: bold; color: #58b0e3;">Survey:</span> &nbsp; DX - Contact Form (Footer)<br />
-					<span style="font-weight: bold; color: #58b0e3;">Creative:</span> &nbsp; Contact Form - Footer<br />
-					<span style="font-weight: bold; color: #58b0e3;">Creative Type:</span> &nbsp; Custom HTML<br />
-					<span style="font-weight: bold; color: #58b0e3;">Intercept:</span> &nbsp; Contact Form - Footer Intercept<br />
-					<span style="font-weight: bold; color: #58b0e3;">Insertion Point:</span> &nbsp; footerForm</dd>
-					</dl>
+<!--END WEBSITE FEEDBACK SNIPPET-->
 
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- 2nd row -->
-	<div class="footerbottom footerbottomdark">
-		<div class="container">
-			<div class="row">
-				<!-- left -->
-				<div class="col-md-4 smallspacetop">
-					<p class="smaller">
-						<span class="copyright">© </span> Copyright 2025 - Walker Information, Inc.
-					</p>
-				</div>
-				<!-- right -->
-				<div class="col-md-8 smallspacetop">
-					<div class="pull-right smaller">
-						<ul class="footermenu">
-							<li><a href="index.php">Home</a></li>
-							<li><a href="creatives.php">Creatives</a></li>
-							<li><a href="contact.php">Contact</a></li>
-						</ul>
-					</div>
-					<div class="clearfix">
-					</div>
-				</div>
-				<!-- end right -->
-			</div>
-		</div>
-	</div>
-	<!-- FOOTER END
-================================================== -->	
-	<!-- FOOTER END
-================================================== -->
-</div>
-<!-- /.body -->
-<!-- Le javascript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<!--<script src="js/jquery.js"></script>-->
-
-
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-
-
-<script src="js/bootstrap.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/custom.js"></script>
-
-
-<!-- CALL CAMERA SLIDER -->
-<script>
-	jQuery(function(){
-		jQuery('#camera_wrap_4').camera({
-			height: 'auto',
-			loader: 'bar',
-			pagination: false,
-			thumbnails: false,
-			hover: true,
-			opacityOnGrid: false,
-			imagePath: 'img/'
-		});
-	});
-</script>
-
-<!-- CALL ACCORDION -->
-<script type="text/javascript">
-	$(".accordion h3").eq(0).addClass("active");
-	$(".accordion .accord_cont").eq(0).show();
-	$(".accordion h3").click(function(){
-		$(this).next(".accord_cont").slideToggle("slow")
-		.siblings(".accord_cont:visible").slideUp("slow");
-		$(this).toggleClass("active");
-		$(this).siblings("h3").removeClass("active");
-	});	
-</script>
-
-<!-- Call opacity on hover images from recent news-->
-<script type="text/javascript">
-$(document).ready(function(){
-    $("img.imgOpa").hover(function() {
-      $(this).stop().animate({opacity: "0.6"}, 'slow');
-    },
-    function() {
-      $(this).stop().animate({opacity: "1.0"}, 'slow');
-    });
-  });
-</script>
-
-<!-- CALL FAQS -->
-<script type="text/javascript"> 
-  $(document).ready(function () {
-   // ---- FAQs ---------------------------------------------------------------------------------------------------------------
-	$('.faqs dd').hide(); // Hide all DDs inside .faqs
-	$('.faqs dt').hover(function(){$(this).addClass('hover')},function(){$(this).removeClass('hover')}).click(function(){ // Add class "hover" on dt when hover
-	$(this).next().slideToggle('normal'); // Toggle dd when the respective dt is clicked
-	}); 
-});
-</script>	
+    
+    <header>
+        <h1>Welcome to Phone World</h1>
+        <p>Your Trusted Destination for the Latest Smartphones</p>
+    </header>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <section class="hero">
+        <h1>Discover the Best Deals on Smartphones</h1>
+        <p>Shop the latest models with unbeatable prices and fast delivery.</p>
+    </section>
+    <section class="features">
+        <div>
+            <h2>Wide Selection</h2>
+            <p>Find phones from top brands like Apple, Samsung, and more.</p>
+        </div>
+        <div>
+            <h2>Competitive Prices</h2>
+            <p>Get the best deals and offers tailored to your budget.</p>
+        </div>
+        <div>
+            <h2>Fast Shipping</h2>
+            <p>Receive your new phone quickly with our reliable delivery options.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Phone World. All rights reserved.</p>
+        <p>Follow us on <a href="#" style="color: #0078d7;">Social Media</a></p>
+    </footer>
 </body>
 </html>

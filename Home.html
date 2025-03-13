@@ -148,21 +148,36 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
 
                 <script>
     // Use DOMContentLoaded to ensure the DOM is fully loaded before running the script
-    document.addEventListener("DOMContentLoaded", function() {
-        // Select the existing button by its ID
-        document.getElementById("feedback_button").onclick = function() {
-            // Create a new element, e.g., a <div>
-            const newElement = document.createElement("div");
-            
-            // Assign the ID to the newly created element
-            newElement.id = "button_clicked";
-            
-            // Optionally, add some content to the new element
-            newElement.innerHTML = "This is the new element created after clicking the button.";
 
-            // Append the new element to an existing container in the DOM
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Check local storage for existing element
+        const savedElement = localStorage.getItem("createdElement");
+
+        // If there is an element saved, create it
+        if (savedElement) {
+            const existingElement = document.createElement("div");
+            existingElement.id = "button_clicked";
+            existingElement.innerHTML = savedElement; 
+            document.getElementById("container").appendChild(existingElement);
+        }
+
+        // Click event for the button
+        document.getElementById("feedback_button").onclick = function() {
+            // Create a new element
+            const newElement = document.createElement("div");
+            newElement.id = "button_clicked";
+            const content = "This is the new element created after clicking the button.";
+            newElement.innerHTML = content; // Set content for the new element
+
+            // Append the new element to the container
             document.getElementById("container").appendChild(newElement);
-            location.reload(); 
+            
+            // Save the content to local storage
+            localStorage.setItem("createdElement", content);
+            
+            // Optionally, reload the page if desired
+            location.reload(); // This will refresh the page
         };
     });
 </script>

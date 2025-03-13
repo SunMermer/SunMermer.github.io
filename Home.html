@@ -144,6 +144,15 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
                     <button id="feedback_button" class="feedback_button">View Button Example</button>
                     <button>View Slider Example</button>
                 </div>
+            <div id="button_clicked"></div>
+            <script>
+            document.getElementById("feedback_button").addEventListener("click", function() {
+            let newElement = document.createElement("div");
+            document.getElementById("container").appendChild(newElement);
+        });
+    </script>
+
+                
                 <div class="creative">
                     <h3>Info Bar</h3>
                     <p>An animated banner that drops down from the top or bottom of the browser.</p>

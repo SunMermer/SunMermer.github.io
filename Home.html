@@ -144,11 +144,20 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
                     <button id="feedback_button" class="feedback_button">View Button Example</button>
                     <button>View Slider Example</button>
                 </div>
-            <div id="button_clicked"></div>
+            <div id="container"></div>
             <script>
-            document.getElementById("feedback_button").addEventListener("click", function() {
-            let newElement = document.createElement("div");
-            document.getElementById("button_clicked").appendChild(newElement);
+    document.getElementById("feedback_button").onclick = function() {
+    // Create a new element, e.g., a <div>
+    const newElement = document.createElement("div");
+    
+    // Assign the ID to the newly created element
+    newElement.id = "button_clicked";
+    
+    // Optionally, add some content to the new element
+    newElement.innerHTML = "This is the new element created after clicking the button.";
+
+    // Append the new element to an existing container in the DOM
+    document.getElementById("container").appendChild(newElement);
         });
     </script>
 

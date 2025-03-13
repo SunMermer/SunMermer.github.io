@@ -144,36 +144,45 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
                     <button id="feedback_button" class="feedback_button">View Button Example</button>
                     <button>View Slider Example</button>
                 </div>
-            <div id="container"></div>
 
-   
-    // Use DOMContentLoaded to ensure the DOM is fully loaded before running the script
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
+        // Check local storage for existing hidden element data
+        const savedElementData = localStorage.getItem("hiddenElementData");
 
-        const savedElement = localStorage.getItem("createdElement");
-        if (savedElement) {
-            const existingElement = document.createElement("div");
-            existingElement.id = "button_clicked";
-            existingElement.innerHTML = savedElement; 
-            document.getElementById("container").appendChild(existingElement);
+        // If data exists, recreate the hidden element
+        if (savedElementData) {
+            const hiddenElement = document.createElement("div");
+            hiddenElement.id = "hidden_element";
+            hiddenElement.innerHTML = savedElementData; // Get the saved data
+            hiddenElement.style.display = "none"; // Hide the element visually
+            document.body.appendChild(hiddenElement);
         }
 
+        // Click event for the feedback button
         document.getElementById("feedback_button").onclick = function() {
-            const newElement = document.createElement("div");
-            newElement.id = "button_clicked";
-            const content = "This is the new element created after clicking the button.";
-            newElement.innerHTML = content; 
-            document.getElementById("container").appendChild(newElement);
-            
-            localStorage.setItem("createdElement", content);
+            // Create a new element
+            const newElementContent = "This data is for backend processing only.";
+            const hiddenElement = document.createElement("div");
+            hiddenElement.id = "hidden_element";
+            hiddenElement.innerHTML = newElementContent; // Set content for the new element
+            hiddenElement.style.display = "none"; // Hide the element visually
         
+            // Append the new element to the document body
+            document.body.appendChild(hiddenElement);
+            
+            // Save the content to local storage
+            localStorage.setItem("hiddenElementData", newElementContent);
+            
+            //console.log("Hidden element created for backend processing.");
+            
+            // Refresh the page after creating the element
             location.reload(); // This will refresh the page
         };
     });
 </script>
-
                 
                 <div class="creative">
                     <h3>Info Bar</h3>

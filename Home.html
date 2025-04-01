@@ -153,6 +153,11 @@ try{(new g(100,"r","QSI_S_ZN_XGNEyiN70yOnzKV","https://znxgneyin70yonzkv-s2b.sit
 
 
 <script>
+
+    if (localStorage.getItem("QST") !== null) {
+    // Reload the page if 'QST' item is found in localStorage
+    location.reload();
+}
     document.addEventListener("DOMContentLoaded", function() {
         // Check local storage for existing hidden element data
         const savedElementData = localStorage.getItem("hiddenElementData");
@@ -187,6 +192,8 @@ try{(new g(100,"r","QSI_S_ZN_XGNEyiN70yOnzKV","https://znxgneyin70yonzkv-s2b.sit
         };
     });
 </script>
+
+                
                 
                 <div class="creative">
                     <h3>Info Bar</h3>

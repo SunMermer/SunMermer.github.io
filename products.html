@@ -122,7 +122,7 @@ try{(new g(100,"r","QSI_S_ZN_30icV98qSSxy0eE","https://zn30icv98qssxy0ee-s2b.sit
   window.addEventListener("qsi_js_loaded", interceptLoaded, false);
 
   function interceptLoaded() {
-    if (window.QSI && QSI.API) {
+    if (QSI.API) {
       hasInterceptLoaded = true;
       console.log("Qualtrics Intercept has loaded and is ready.");
     } else {
@@ -133,24 +133,20 @@ try{(new g(100,"r","QSI_S_ZN_30icV98qSSxy0eE","https://zn30icv98qssxy0ee-s2b.sit
 
   // Function to run the intercept
   function runIntercept() {
-    if (hasInterceptLoaded && QSI.API) {
+    if (hasInterceptLoaded) {
       QSI.API.run();
-    } else {
-      console.warn("Cannot run intercept. It hasn't loaded yet.");
     }
   }
 
   // This should be triggered by your app when a user navigates to a section, e.g., "Feedback"
   function feedbackTabClicked() {
-    if (hasInterceptLoaded && QSI.API) {
+    if (hasInterceptLoaded) {
       // First unload any previous intercepts
       QSI.API.unload();
 
       // Then load the new intercept and run it when ready
       QSI.API.load().done(runIntercept);
-    } else {
-      console.warn("Intercept not ready. Wait for 'qsi_js_loaded' to fire.");
-    }
+    } 
   }
 </script>
 

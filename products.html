@@ -3,77 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | Phone World</title>
+    <title>Creatives - Walker</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #f5f5f5;
         }
         header {
-            background-color: #0078d7;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
             display: flex;
-            justify-content: center;
-            background-color: #005a9e;
-            padding: 10px 0;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            color: white;
+            padding: 15px 30px;
         }
-        nav a {
-            color: #fff;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
+            color: white;
+            padding: 10px;
         }
-        nav a:hover {
-            text-decoration: underline;
+        nav ul li a.active {
+            background: #f60;
+            border-radius: 5px;
         }
-        .products {
-            display: flex;
-            flex-wrap: wrap;
+        .brand {
+            font-size: 14px;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px;
+            background: white;
+        }
+        .creatives {
+            padding: 20px;
+            background: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #f60;
+        }
+        .creative-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            padding: 20px;
-            justify-content: center;
+            padding-top: 10px;
         }
-        .product-card {
+        .creative {
             background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
-            padding: 20px;
         }
-        .product-card img {
-            max-width: 100%;
-            height: auto;
+        .creative h3 {
+            margin-top: 0;
+        }
+        button {
+            background: #f60;
+            color: white;
+            border: none;
+            padding: 10px 15px;
             border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
         }
-        .product-card h3 {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-        .product-card p {
-            color: #0078d7;
-            font-size: 1rem;
-            margin: 5px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
+        button:hover {
+            background: #d45000;
         }
     </style>
 </head>
 <body>
-    <!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
 
+
+<!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
 <script type='text/javascript'>
 
 (function(){var g=function(e,h,f,g){
@@ -88,39 +107,135 @@ this.go=function(){if(this.check()){var a=document.createElement("script");a.typ
 
 this.start=function(){var t=this;"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",function(){t.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){t.go()}):t.go()};};
 
-try{(new g(100,"r","QSI_S_ZN_3GBOYreopBa2NBI","https://zn3gboyreopba2nbi-basecampvqzb2hsp5p.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_3GBOYreopBa2NBI")).start()}catch(i){}})();
+try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_72uQaFHHH9lfYWy")).start()}catch(i){}})();
 
-</script><div id='ZN_3GBOYreopBa2NBI'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+</script><div id='ZN_72uQaFHHH9lfYWy'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+
 
 <!--END WEBSITE FEEDBACK SNIPPET-->
+    
+
+
     <header>
-        <h1>Our Products</h1>
+        <div class="logo">Digital Intercept</div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="products.html">Use Cases</a></li>
+                <li><a href="#" class="active">Creatives</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="about.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="brand">qualtrics<sup>XM</sup> DIGITAL CX DEMO</div>
     </header>
-    <nav>
-        <a href="Home.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-    <section class="products">
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300x200" alt="Product 1">
-            <h3>iPhone 15</h3>
-            <p>$999</p>
-        </div>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300x200" alt="Product 2">
-            <h3>Samsung Galaxy S23</h3>
-            <p>$899</p>
-        </div>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/300x200" alt="Product 3">
-            <h3>Google Pixel 8</h3>
-            <p>$799</p>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2024 Phone World. All rights reserved.</p>
-    </footer>
+    <main>
+        <section class="hero">
+            <h1>CREATIVES</h1>
+            <p>The creative is what will actually display on your site. For the most part, your creative will either display your embedded target or link out to your target.</p>
+        </section>
+        <section class="creatives">
+            <h2>Recommended Creatives</h2>
+            <div class="creative-list">
+                <div class="creative">
+                    <h3>Responsive Dialog</h3>
+                    <p>A dialog box overlayed on top of your page that adjusts to the viewer’s device.</p>
+                    <button>View Example</button>
+                    <button>View Embedded Survey</button>
+                </div>
+                <div class="creative">
+                    <h3>Feedback Button</h3>
+                    <p>A mobile responsive icon that helps capture page-level feedback.</p>
+                    <button id="feedback_button" class="feedback_button">View Button Example</button>
+                    <button>View Slider Example</button>
+                </div>
+
+
+
+<script>
+
+    if (localStorage.getItem("QSI_QualtricsSurveyHistory") !== null) {
+    // Reload the page if 'QST' item is found in localStorage
+    location.reload();
+}
+    document.addEventListener("DOMContentLoaded", function() {
+        // Check local storage for existing hidden element data
+        const savedElementData = localStorage.getItem("hiddenElementData");
+
+        // If data exists, recreate the hidden element
+        if (savedElementData) {
+            const hiddenElement = document.createElement("div");
+            hiddenElement.id = "hidden_element";
+            hiddenElement.innerHTML = savedElementData; // Get the saved data
+            hiddenElement.style.display = "none"; // Hide the element visually
+            document.body.appendChild(hiddenElement);
+        }
+
+        // Click event for the feedback button
+        document.getElementById("feedback_button").onclick = function() {
+            // Create a new element
+            const newElementContent = "This data is for backend processing only.";
+            const hiddenElement = document.createElement("div");
+            hiddenElement.id = "hidden_element";
+            hiddenElement.innerHTML = newElementContent; // Set content for the new element
+            hiddenElement.style.display = "none"; // Hide the element visually
+        
+            // Append the new element to the document body
+            document.body.appendChild(hiddenElement);
+            
+            // Save the content to local storage
+            localStorage.setItem("hiddenElementData", newElementContent);
+            
+            //console.log("Hidden element created for backend processing.");
+            location.reload(); // This will refresh the page
+     
+        };
+    });
+</script>
+
+                
+                
+                <div class="creative">
+                    <h3>Info Bar</h3>
+                    <p>An animated banner that drops down from the top or bottom of the browser.</p>
+                    <button>View Example</button>
+                </div>
+                <div class="creative">
+                    <h3>Pop Under</h3>
+                    <p>A new browsing window that appears behind the current window until the visitor leaves.</p>
+                    <button>View Example</button>
+                </div>
+            </div>
+        </section>
+        <section class="creatives">
+            <h2>Other Creatives</h2>
+            <div class="creative-list">
+                <div class="creative">
+                    <h3>Custom HTML</h3>
+                    <p>Allows you to build out custom content anywhere on your page.</p>
+                    <button id="hover_id_1">View Examples</button>
+                </div>
+                <div class="creative">
+                    <h3>Embedded Link</h3>
+                    <p>Allows you to place text within your site that links to a dynamic URL.</p>
+                    <button id="hover_id_2">View Example</button>
+                </div>
+                <div class="creative">
+                    <h3>Pop Over</h3>
+                    <p>An embedded window that overlays your page content.</p>
+                    <button id="hover_id_3">View Example</button>   
+                 
+                    <!-- <span id= "OnClick" onmouseover="console.log('Mouse over span'>HTML On Site</span>-->
+                                                                                                                                            
+   
+                </div>
+                <div class="creative">
+                    <h3>Slider</h3>
+                    <p>Animates out of the webpage border and can be triggered by scrolling or clicking.</p>
+                    <button id="hover_id_4" onmouseover = "window._qsie = window._qsie || []; window._qsie.push('moveover');">View Example</button>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

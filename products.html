@@ -113,6 +113,47 @@ try{(new g(100,"r","QSI_S_ZN_30icV98qSSxy0eE","https://zn30icv98qssxy0ee-s2b.sit
 </script><div id='ZN_30icV98qSSxy0eE'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
 
 <!--END WEBSITE FEEDBACK SNIPPET-->
+
+
+    <script>
+  let hasInterceptLoaded = false;
+
+  // Listen for the Qualtrics loaded event
+  window.addEventListener("qsi_js_loaded", interceptLoaded, false);
+
+  function interceptLoaded() {
+    if (window.QSI && QSI.API) {
+      hasInterceptLoaded = true;
+      console.log("Qualtrics Intercept has loaded and is ready.");
+    } else {
+      hasInterceptLoaded = false;
+      console.warn("Qualtrics API not available.");
+    }
+  }
+
+  // Function to run the intercept
+  function runIntercept() {
+    if (hasInterceptLoaded && QSI.API) {
+      QSI.API.run();
+    } else {
+      console.warn("Cannot run intercept. It hasn't loaded yet.");
+    }
+  }
+
+  // This should be triggered by your app when a user navigates to a section, e.g., "Feedback"
+  function feedbackTabClicked() {
+    if (hasInterceptLoaded && QSI.API) {
+      // First unload any previous intercepts
+      QSI.API.unload();
+
+      // Then load the new intercept and run it when ready
+      QSI.API.load().done(runIntercept);
+    } else {
+      console.warn("Intercept not ready. Wait for 'qsi_js_loaded' to fire.");
+    }
+  }
+</script>
+
     
 
 
@@ -232,7 +273,7 @@ try{(new g(100,"r","QSI_S_ZN_30icV98qSSxy0eE","https://zn30icv98qssxy0ee-s2b.sit
                 <div class="creative">
                     <h3>Slider</h3>
                     <p>Animates out of the webpage border and can be triggered by scrolling or clicking.</p>
-                    <button id="hover_id_4" onmouseover = "window._qsie = window._qsie || []; window._qsie.push('moveover');">View Example</button>
+                    <button id="hover_id_4" onmouseover = "window._qsie = window._qsie || []; window._qsie.push('moveover'); feedbackTabClicked();">View Example</button>
                 </div>
             </div>
         </section>

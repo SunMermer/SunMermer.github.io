@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatives - Walker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            color: white;
+            padding: 15px 30px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+        nav ul li a.active {
+            background: #f60;
+            border-radius: 5px;
+        }
+        .brand {
+            font-size: 14px;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px;
+            background: white;
+        }
+        .creatives {
+            padding: 20px;
+            background: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #f60;
+        }
+        .creative-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding-top: 10px;
+        }
+        .creative {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .creative h3 {
+            margin-top: 0;
+        }
+        button {
+            background: #f60;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #d45000;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+
+<script type='text/javascript'>
+
+(function(){var g=function(g){
+
+this.go=function(){var a=document.createElement("script");a.type="text/javascript";a.src=g;document.body&&document.body.appendChild(a)};
+
+this.start=function(){var t=this;"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",function(){t.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){t.go()}):t.go()};};
+
+try{(new g("https://znvgrshp3ltt58wnd-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_vGrsHP3ltT58WnD")).start()}catch(i){}})();
+
+</script><div id='ZN_vGrsHP3ltT58WnD'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+
+<!--END WEBSITE FEEDBACK SNIPPET-->
+    
+
+
+    <header>
+        <div class="logo">WALKER</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="products.html">Use Cases</a></li>
+                <li><a href="#" class="active">Creatives</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="about.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="brand">qualtrics<sup>XM</sup> DIGITAL CX DEMO</div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>CREATIVES</h1>
+            <p>The creative is what will actually display on your site. For the most part, your creative will either display your embedded target or link out to your target.</p>
+        </section>
+        <section class="creatives">
+            <h2>Recommended Creatives</h2>
+            <div class="creative-list">
+                <div class="creative">
+                    <h3>Responsive Dialog</h3>
+                    <p>A dialog box overlayed on top of your page that adjusts to the viewer’s device.</p>
+                    <button>View Example</button>
+                    <button>View Embedded Survey</button>
+                </div>
+                <div class="creative">
+                    <h3>Feedback Button</h3>
+                    <p>A mobile responsive icon that helps capture page-level feedback.</p>
+                    <button id="feedback_button" class="feedback_button">View Button Example</button>
+                    <button>View Slider Example</button>
+                </div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Show popup
+    document.getElementById("popupBtn").addEventListener("click", function () {
+      document.getElementById("customPopup").style.display = "block";
+    });
+
+    // Hide popup (and overlay)
+    document.getElementById("closePopup").addEventListener("click", function () {
+      document.getElementById("customPopup").style.display = "none";
+      document.getElementById("overlayContent").style.display = "none";
+      // Remove iframe when closing popup
+      document.getElementById("iframeContainer").innerHTML = "";
+    });
+
+    // Show overlay inside popup
+    document.getElementById("showOverlayBtn").addEventListener("click", function() {
+      document.getElementById("overlayContent").style.display = "block";
+    });
+
+    // Close overlay
+    document.getElementById("closeOverlay").addEventListener("click", function() {
+      document.getElementById("overlayContent").style.display = "none";
+      // Remove iframe when closing overlay
+      document.getElementById("iframeContainer").innerHTML = "";
+    });
+
+    // Load survey iframe inside overlay on button click
+    document.getElementById("loadSurveyBtn").addEventListener("click", function() {
+      var container = document.getElementById("iframeContainer");
+      container.innerHTML = '<iframe src="https://tamearlyaccess.sjc1.qualtrics.com/jfe/form/SV_6l16zOqKJxtdprg" ' +
+                            'width="100%" height="100%" style="border:none; border-radius:6px;"></iframe>';
+    });
+  });
+
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Show popup
+    document.getElementById("popupBtn").addEventListener("click", function () {
+      document.getElementById("customPopup").style.display = "block";
+    });
+
+    // Hide popup
+    document.getElementById("closePopup").addEventListener("click", function () {
+      document.getElementById("customPopup").style.display = "none";
+      // Also hide overlay if open
+      document.getElementById("overlayContent").style.display = "none";
+    });
+
+    // Show overlay inside popup
+    document.getElementById("showOverlayBtn").addEventListener("click", function() {
+      document.getElementById("overlayContent").style.display = "block";
+    });
+
+    // Close overlay
+    document.getElementById("closeOverlay").addEventListener("click", function() {
+      document.getElementById("overlayContent").style.display = "none";
+    });
+  });
+</script>
+                
+                
+                <div class="creative">
+                    <h3>Info Bar</h3>
+                    <p>An animated banner that drops down from the top or bottom of the browser.</p>
+                    <button>View Example</button>
+                </div>
+                <div class="creative">
+                    <h3>Pop Under</h3>
+                    <p>A new browsing window that appears behind the current window until the visitor leaves.</p>
+                    <button>View Example</button>
+                </div>
+            </div>
+        </section>
+        <section class="creatives">
+            <h2>Other Creatives</h2>
+            <div class="creative-list">
+                <div class="creative">
+                    <h3>Custom HTML</h3>
+                    <p>Allows you to build out custom content anywhere on your page.</p>
+                    <button>View Examples</button>
+                </div>
+                <div class="creative">
+                    <h3>Embedded Link</h3>
+                    <p>Allows you to place text within your site that links to a dynamic URL.</p>
+                    <button>View Example</button>
+                </div>
+                <div class="creative">
+                    <h3>Pop Over</h3>
+                    <p>An embedded window that overlays your page content.</p>
+                    <button onmouseover="console.log('Mouse over span')">View Example</button><br>    
+                  
+                    <span id= "OnClick">HTML On Site</span>
+                                                                                                                                            
+   
+                </div>
+                <div class="creative">
+                    <h3>Slider 1</h3>
+                    <p>Animates out of the webpage border and can be triggered by scrolling or clicking.</p>
+                    <button>View Example</button>
+                </div>
+                <div class="creative">
+                    <h3>Chatbot</h3>
+                    <p>For SCB Chatbot integration CSAT testing</p>
+                    <button id="popupBtn">View Example</button>
+                </div>
+
+                <div id="customPopup" style="
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px 20px 15px 20px;
+  border: 2px solid black;
+  z-index: 9999;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  width: 500px;
+  hight: 500px;
+  max-width: 90%;
+  border-radius: 8px;
+  font-family: sans-serif;
+  position: fixed;
+">
+
+  <!-- Close (×) icon -->
+  <span id="closePopup" style="
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  ">&times;</span>
+
+  <!-- Popup content -->
+  <p>This is a sample example popup content.</p>
+
+ <button id="showOverlayBtn" style="margin-top: 10px;">Show Overlay</button>
+                    <div id="overlayContent" style="
+    display: none;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 16px;
+  ">
+    <span id="closeOverlay" style="
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    ">&times;</span>
+    <p>This is the overlay content inside the popup.</p>
+     <button id="loadSurveyBtn" style="margin-top: 10px; padding: 8px 12px; cursor: pointer;">
+      Load Survey
+    </button>
+     <div id="iframeContainer" style="margin-top: 15px; height: 400px; overflow: hidden;border-radius: 6px;position: relative;">
+      <!-- iframe will be injected here -->
+    </div>
+</div>
+                    
+</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

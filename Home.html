@@ -152,44 +152,39 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
 
 
 <script>
-
-    if (localStorage.getItem("QSI_QualtricsSurveyHistory") !== null) {
-    // Reload the page if 'QST' item is found in localStorage
-    location.reload();
-}
-    document.addEventListener("DOMContentLoaded", function() {
-        // Check local storage for existing hidden element data
-        const savedElementData = localStorage.getItem("hiddenElementData");
-
-        // If data exists, recreate the hidden element
-        if (savedElementData) {
-            const hiddenElement = document.createElement("div");
-            hiddenElement.id = "hidden_element";
-            hiddenElement.innerHTML = savedElementData; // Get the saved data
-            hiddenElement.style.display = "none"; // Hide the element visually
-            document.body.appendChild(hiddenElement);
-        }
-
-        // Click event for the feedback button
-        document.getElementById("feedback_button").onclick = function() {
-            // Create a new element
-            const newElementContent = "This data is for backend processing only.";
-            const hiddenElement = document.createElement("div");
-            hiddenElement.id = "hidden_element";
-            hiddenElement.innerHTML = newElementContent; // Set content for the new element
-            hiddenElement.style.display = "none"; // Hide the element visually
-        
-            // Append the new element to the document body
-            document.body.appendChild(hiddenElement);
-            
-            // Save the content to local storage
-            localStorage.setItem("hiddenElementData", newElementContent);
-            
-            //console.log("Hidden element created for backend processing.");
-            location.reload(); // This will refresh the page
-     
-        };
+  document.addEventListener("DOMContentLoaded", function() {
+    // Show popup
+    document.getElementById("popupBtn").addEventListener("click", function () {
+      document.getElementById("customPopup").style.display = "block";
     });
+
+    // Hide popup (and overlay)
+    document.getElementById("closePopup").addEventListener("click", function () {
+      document.getElementById("customPopup").style.display = "none";
+      document.getElementById("overlayContent").style.display = "none";
+      // Remove iframe when closing popup
+      document.getElementById("iframeContainer").innerHTML = "";
+    });
+
+    // Show overlay inside popup
+    document.getElementById("showOverlayBtn").addEventListener("click", function() {
+      document.getElementById("overlayContent").style.display = "block";
+    });
+
+    // Close overlay
+    document.getElementById("closeOverlay").addEventListener("click", function() {
+      document.getElementById("overlayContent").style.display = "none";
+      // Remove iframe when closing overlay
+      document.getElementById("iframeContainer").innerHTML = "";
+    });
+
+    // Load survey iframe inside overlay on button click
+    document.getElementById("loadSurveyBtn").addEventListener("click", function() {
+      var container = document.getElementById("iframeContainer");
+      container.innerHTML = '<iframe src="https://tamearlyaccess.sjc1.qualtrics.com/jfe/form/SV_6l16zOqKJxtdprg" ' +
+                            'width="100%" height="100%" style="border:none; border-radius:6px;"></iframe>';
+    });
+  });
 
 </script>
 
@@ -318,6 +313,12 @@ document.addEventListener("DOMContentLoaded", function() {
       color: white;
     ">&times;</span>
     <p>This is the overlay content inside the popup.</p>
+     <button id="loadSurveyBtn" style="margin-top: 10px; padding: 8px 12px; cursor: pointer;">
+      Load Survey
+    </button>
+     <div id="iframeContainer" style="margin-top: 15px; height: 400px;">
+      <!-- iframe will be injected here -->
+    </div>
 </div>
                     
 </div>

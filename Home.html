@@ -151,7 +151,6 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
                 </div>
 
 
-
 <script>
 
     if (localStorage.getItem("QSI_QualtricsSurveyHistory") !== null) {
@@ -191,6 +190,15 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
      
         };
     });
+
+    //this is for chatbot 
+      document.getElementById("popupBtn").addEventListener("click", function() {
+    document.getElementById("customPopup").style.display = "block";
+  });
+
+  document.getElementById("closePopup").addEventListener("click", function() {
+    document.getElementById("customPopup").style.display = "none";
+  });
 </script>
 
                 
@@ -233,6 +241,37 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
                     <h3>Slider</h3>
                     <p>Animates out of the webpage border and can be triggered by scrolling or clicking.</p>
                     <button>View Example</button>
+                </div>
+                    <div class="creative" d="customPopup" style="
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 2px solid black;
+  z-index: 9999;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  width: 300px;
+  max-width: 90%;
+  border-radius: 8px;
+  font-family: sans-serif;
+  position: fixed;">
+
+                         <span id="closePopup" style="
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  ">&times;</span>
+
+                    <h3>Chatbot</h3>
+                    <p>For SCB Chatbot integration CSAT testing</p>
+                    <button id="popupBtn">View Example</button>
                 </div>
             </div>
         </section>

@@ -182,7 +182,8 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
     document.getElementById("loadSurveyBtn").addEventListener("click", function() {
       var container = document.getElementById("iframeContainer");
       container.innerHTML = '<iframe src="https://tamearlyaccess.sjc1.qualtrics.com/jfe/form/SV_6l16zOqKJxtdprg" ' +
-                            'width="100%" height="100%" style="border:none; border-radius:6px;"></iframe>';
+                            'width="100%" height="100%" style="border: none; transform: scale(0.8); transform-origin: top left; width: 125%;"
+    scrolling="no"></iframe>';
     });
   });
 
@@ -317,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function() {
      <button id="loadSurveyBtn" style="margin-top: 10px; padding: 8px 12px; cursor: pointer;">
       Load Survey
     </button>
-     <div id="iframeContainer" style="margin-top: 15px; height: 400px;">
+     <div id="iframeContainer" style="margin-top: 15px; height: 400px; overflow: hidden;border-radius: 6px;position: relative;">
       <!-- iframe will be injected here -->
     </div>
 </div>

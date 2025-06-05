@@ -191,16 +191,19 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
         };
     });
 
-    //this is for chatbot 
-      document.getElementById("popupBtn").addEventListener("click", function() {
+</script>
+
+                <script>
+  // Show popup
+  document.getElementById("popupBtn").addEventListener("click", function () {
     document.getElementById("customPopup").style.display = "block";
   });
 
-  document.getElementById("closePopup").addEventListener("click", function() {
+  // Hide popup
+  document.getElementById("closePopup").addEventListener("click", function () {
     document.getElementById("customPopup").style.display = "none";
   });
 </script>
-
                 
                 
                 <div class="creative">
@@ -247,6 +250,39 @@ try{(new g(100,"r","QSI_S_ZN_72uQaFHHH9lfYWy","https://zn72uqafhhh9lfywy-s2b.sit
                     <p>For SCB Chatbot integration CSAT testing</p>
                     <button id="popupBtn">View Example</button>
                 </div>
+
+                <div id="customPopup" style="
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px 20px 15px 20px;
+  border: 2px solid black;
+  z-index: 9999;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  width: 300px;
+  max-width: 90%;
+  border-radius: 8px;
+  font-family: sans-serif;
+  position: fixed;
+">
+
+  <!-- Close (×) icon -->
+  <span id="closePopup" style="
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  ">&times;</span>
+
+  <!-- Popup content -->
+  <p>This is a sample example popup content.</p>
+</div>
             </div>
         </section>
     </main>

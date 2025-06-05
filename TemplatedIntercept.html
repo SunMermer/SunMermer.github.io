@@ -156,8 +156,7 @@ try{(new g("https://znvgrshp3ltt58wnd-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
     document.getElementById("closePopup").addEventListener("click", function () {
       document.getElementById("customPopup").style.display = "none";
       document.getElementById("overlayContent").style.display = "none";
-      // Remove iframe when closing popup
-      document.getElementById("iframeContainer").innerHTML = "";
+
     });
 
     // Show overlay inside popup
@@ -168,8 +167,7 @@ try{(new g("https://znvgrshp3ltt58wnd-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
     // Close overlay
     document.getElementById("closeOverlay").addEventListener("click", function() {
       document.getElementById("overlayContent").style.display = "none";
-      // Remove iframe when closing overlay
-      document.getElementById("iframeContainer").innerHTML = "";
+
     });
 
 
@@ -306,9 +304,6 @@ document.addEventListener("DOMContentLoaded", function() {
      <button id="loadSurveyBtn" style="margin-top: 10px; padding: 8px 12px; cursor: pointer;">
       Load Survey
     </button>
-     <div id="iframeContainer" style="margin-top: 15px; height: 400px; overflow: hidden;border-radius: 6px;position: relative;">
-      <!-- iframe will be injected here -->
-    </div>
     <div id="qualtricsInterceptContainer" style="margin-top: 20px;"></div> 
 </div>
                     

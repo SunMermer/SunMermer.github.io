@@ -126,9 +126,9 @@ window.addEventListener("qsi_js_loaded", interceptLoaded, false);
     }
   }
 
-  // Function to run the intercept
+  // Function to run the intercept 
   function runIntercept() {
-    if (hasInterceptLoaded === true) {
+    if (hasInterceptLoaded) {
       QSI.API.run();
       console.log("hasInterceptLoaded");
     }
@@ -137,7 +137,7 @@ window.addEventListener("qsi_js_loaded", interceptLoaded, false);
  // This should be triggered by your app when a user navigates to a section, e.g., "Feedback"
 
    function feedbackTabClicked() {
-      if (hasInterceptLoaded === true) {
+      if (hasInterceptLoaded) {
       // First unload any previous intercepts
       QSI.API.unload();
       // Then load the new intercept and run it when ready

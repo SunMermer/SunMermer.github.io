@@ -148,23 +148,9 @@ try{(new g("https://znw0niprt1yzwyrih-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
 
 <script>
 
-    if (localStorage.getItem("QSI_QualtricsSurveyHistory") !== null) {
-    // Reload the page if 'QST' item is found in localStorage
-    location.reload();
-}
+
     document.addEventListener("DOMContentLoaded", function() {
-        // Check local storage for existing hidden element data
-        const savedElementData = localStorage.getItem("hiddenElementData");
-
-        // If data exists, recreate the hidden element
-        if (savedElementData) {
-            const hiddenElement = document.createElement("div");
-            hiddenElement.id = "hidden_element";
-            hiddenElement.innerHTML = savedElementData; // Get the saved data
-            hiddenElement.style.display = "none"; // Hide the element visually
-            document.body.appendChild(hiddenElement);
-        }
-
+       
         // Click event for the feedback button
         document.getElementById("feedback_button").onclick = function() {
             // Create a new element
@@ -177,11 +163,7 @@ try{(new g("https://znw0niprt1yzwyrih-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
             // Append the new element to the document body
             document.body.appendChild(hiddenElement);
             
-            // Save the content to local storage
-            localStorage.setItem("hiddenElementData", newElementContent);
-            
-            //console.log("Hidden element created for backend processing.");
-            location.reload(); // This will refresh the page
+      
      
         };
     });
@@ -217,12 +199,14 @@ try{(new g("https://znw0niprt1yzwyrih-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
                 <div class="creative">
                     <h3>Pop Over</h3>
                     <p>An embedded window that overlays your page content.</p>
-                    <button id="hover_id_3" onclick="feedbackTabClicked()">Manually trigger</button>                                                                                                                                                
+                    <button id="hover_id_3" onclick="createSurveyDivAndTrigger()">Manually trigger</button>    
+                    
                 </div>
                 
             </div>
         </section>
     </main>
+    <div id="survey-container"></div>
 
     <script>
 
@@ -264,6 +248,21 @@ window.addEventListener("qsi_js_loaded", interceptLoaded, false);
     
     } 
   } 
+
+        function createSurveyDivAndTrigger() {
+    // Check if the div already exists
+    if (!document.getElementById("s2bLendingQSISurvey")) {
+      const newDiv = document.createElement("div");
+      newDiv.id = "s2bLendingQSISurvey";
+      document.getElementById("survey-container").appendChild(newDiv);
+      console.log("🆕 Created div with id='s2bLendingQSISurvey'");
+    } else {
+      console.log("⚠️ Div already exists. Skipping creation.");
+    }
+
+    // Now that the div is in place, call the intercept function
+    feedbackTabClicked();
+  }
  
 </script>
 

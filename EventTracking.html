@@ -130,16 +130,11 @@ try{(new g("https://zn72uqafhhh9lfywy-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
     }
   }
 
+        function feedbackTabClicked() {
+  alert("Button clicked!");
+}
   // This should be triggered by your app when a user navigates to a section, e.g., "Feedback"
-  function feedbackTabClicked() {
-    if (hasInterceptLoaded) {
-      // First unload any previous intercepts
-      QSI.API.unload();
 
-      // Then load the new intercept and run it when ready
-      QSI.API.load().done(runIntercept);
-    } 
-  }
 </script>
 
     <header>

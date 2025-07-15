@@ -248,8 +248,7 @@ window.addEventListener("qsi_js_loaded", interceptLoaded, false);
     
     } 
   } 
-
-        function createSurveyDivAndTrigger() {
+function createSurveyDivAndTrigger() {
     // Check if the div already exists
     if (!document.getElementById("s2bLendingQSISurvey")) {
       const newDiv = document.createElement("div");
@@ -260,19 +259,16 @@ window.addEventListener("qsi_js_loaded", interceptLoaded, false);
       console.log("⚠️ Div already exists. Skipping creation.");
     }
 
-    // Now that the div is in place, call the intercept function
-   const url = new URL(window.location.href);
-
-    // Only add the parameter if it's not already there
+    // Update the URL with feedback=true if not already there
+    const url = new URL(window.location.href);
     if (!url.searchParams.has("feedback")) {
       url.searchParams.append("feedback", "true");
       window.history.replaceState({}, '', url);
     }
 
-    // Optional: Do other things here, like creating a div or logging
-    console.log("URL updated and feedback parameter added.");
+    console.log("✅ URL updated and feedback parameter added.");
   }
-  }
+        
  
 </script>
 

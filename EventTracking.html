@@ -142,7 +142,7 @@ window.addEventListener("qsi_js_loaded", interceptLoaded, false);
 function feedbackTabClicked() {
 
   QSI.API.unload();             // Reset any previous intercept
-  QSI.API.resetIntercept();     // Optional: allow it to show again
+
   QSI.API.load().then(function () {
     console.log("Intercept loaded – now running");
     QSI.API.run();

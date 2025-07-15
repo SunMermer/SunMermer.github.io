@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCB Testing Environment</title>
+    <title>Creatives - Walker</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -91,9 +91,6 @@
 </head>
 <body>
 
-
-<!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
-
 <!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
 
 <script type='text/javascript'>
@@ -110,6 +107,40 @@ try{(new g("https://zn72uqafhhh9lfywy-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
 
 <!--END WEBSITE FEEDBACK SNIPPET-->
 
+    <script>
+  let hasInterceptLoaded = false;
+
+  // Listen for the Qualtrics loaded event
+  window.addEventListener("qsi_js_loaded", interceptLoaded, false);
+
+  function interceptLoaded() {
+    if (QSI.API) {
+      hasInterceptLoaded = true;
+      console.log("Qualtrics Intercept has loaded and is ready.");
+    } else {
+      hasInterceptLoaded = false;
+      console.warn("Qualtrics API not available.");
+    }
+  }
+
+  // Function to run the intercept
+  function runIntercept() {
+    if (hasInterceptLoaded) {
+      QSI.API.run();
+    }
+  }
+
+  // This should be triggered by your app when a user navigates to a section, e.g., "Feedback"
+  function feedbackTabClicked() {
+    if (hasInterceptLoaded) {
+      // First unload any previous intercepts
+      QSI.API.unload();
+
+      // Then load the new intercept and run it when ready
+      QSI.API.load().done(runIntercept);
+    } 
+  }
+</script>
 
     <header>
         <div class="logo">Digital Intercept</div>
@@ -218,7 +249,7 @@ try{(new g("https://zn72uqafhhh9lfywy-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
                 <div class="creative">
                     <h3>Pop Over</h3>
                     <p>An embedded window that overlays your page content.</p>
-                    <button id="hover_id_3" onclick = "window._qsie = window._qsie || []; window._qsie.push('submit');">View Example</button>   
+                    <button id="hover_id_3" onclicked = "feedbackTabClicked();">View Example</button>   
                  
                     <!-- <span id= "OnClick" onmouseover="console.log('Mouse over span'>HTML On Site</span>-->
                                                                                                                                             
@@ -227,7 +258,7 @@ try{(new g("https://zn72uqafhhh9lfywy-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
                 <div class="creative">
                     <h3>Slider</h3>
                     <p>Animates out of the webpage border and can be triggered by scrolling or clicking.</p>
-                    <button id="hover_id_4" onmouseover = "window._qsie = window._qsie || []; window._qsie.push('moveover_set_2');">View Example</button>
+                    <button id="hover_id_4" onmouseover = "window._qsie = window._qsie || []; window._qsie.push('moveover_set_2'); feedbackTabClicked();">View Example</button>
                 </div>
             </div>
         </section>

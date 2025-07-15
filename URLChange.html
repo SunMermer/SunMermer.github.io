@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatives - Walker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            color: white;
+            padding: 15px 30px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+        nav ul li a.active {
+            background: #f60;
+            border-radius: 5px;
+        }
+        .brand {
+            font-size: 14px;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px;
+            background: white;
+        }
+        .creatives {
+            padding: 20px;
+            background: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #f60;
+        }
+        .creative-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding-top: 10px;
+        }
+        .creative {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .creative h3 {
+            margin-top: 0;
+        }
+        button {
+            background: #f60;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #d45000;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--BEGIN QUALTRICS WEBSITE FEEDBACK SNIPPET-->
+
+<script type='text/javascript'>
+
+(function(){var g=function(g){
+
+this.go=function(){var a=document.createElement("script");a.type="text/javascript";a.src=g;document.body&&document.body.appendChild(a)};
+
+this.start=function(){var t=this;"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",function(){t.go()},!1):window.attachEvent&&window.attachEvent("onload",function(){t.go()}):t.go()};};
+
+try{(new g("https://znw0niprt1yzwyrih-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_w0niPrT1yZwyRih")).start()}catch(i){}})();
+
+</script><div id='ZN_w0niPrT1yZwyRih'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+
+<!--END WEBSITE FEEDBACK SNIPPET-->
+
+
+    <header>
+        <div class="logo">Digital Intercept</div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="products.html">Use Cases</a></li>
+                <li><a href="#" class="active">Creatives</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="about.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="brand">qualtrics<sup>XM</sup> DIGITAL CX DEMO</div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>CREATIVES</h1>
+            <p>The creative is what will actually display on your site. For the most part, your creative will either display your embedded target or link out to your target.</p>
+        </section>
+        <section class="creatives">
+            <h2>Recommended Creatives</h2>
+            <div class="creative-list">
+                <div class="creative">
+                    <h3>Responsive Dialog</h3>
+                    <p>A dialog box overlayed on top of your page that adjusts to the viewer’s device.</p>
+                    <button>View Example</button>
+                    <button>View Embedded Survey</button>
+                </div>
+                <div class="creative">
+                    <h3>Feedback Button</h3>
+                    <p>A mobile responsive icon that helps capture page-level feedback.</p>
+                    <button id="feedback_button" class="feedback_button">View Button Example</button>
+                
+                    <button>View Slider Example</button>
+                </div>
+
+
+
+<script>
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+       
+        // Click event for the feedback button
+        document.getElementById("feedback_button").onclick = function() {
+            // Create a new element
+            const newElementContent = "This data is for backend processing only.";
+            const hiddenElement = document.createElement("div");
+            hiddenElement.id = "hidden_element";
+            hiddenElement.innerHTML = newElementContent; // Set content for the new element
+            hiddenElement.style.display = "none"; // Hide the element visually
+        
+            // Append the new element to the document body
+            document.body.appendChild(hiddenElement);
+            
+      
+     
+        };
+    });
+</script>
+
+                
+                
+                <div class="creative">
+                    <h3>Info Bar</h3>
+                    <p>An animated banner that drops down from the top or bottom of the browser.</p>
+                    <button>View Example</button>
+                </div>
+                <div class="creative">
+                    <h3>Pop Under</h3>
+                    <p>A new browsing window that appears behind the current window until the visitor leaves.</p>
+                    <button>View Example</button>
+                </div>
+            </div>
+        </section>
+        <section class="creatives">
+            <h2>Other Creatives</h2>
+            <div class="creative-list">
+                <div class="creative">
+                    <h3>Custom HTML</h3>
+                    <p>Allows you to build out custom content anywhere on your page.</p>
+                    <button id="hover_id_1">View Examples</button>
+                </div>
+                <div class="creative">
+                    <h3>Embedded Link</h3>
+                    <p>Allows you to place text within your site that links to a dynamic URL.</p>
+                    <button id="hover_id_2">View Example</button>
+                </div>
+                <div class="creative">
+                    <h3>Pop Over</h3>
+                    <p>An embedded window that overlays your page content.</p>
+                    <button id="hover_id_3" onclick="createSurveyDivAndTrigger()">Manually trigger</button>    
+                    
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <div id="survey-container"></div>
+
+    <script>
+
+//let hasInterceptLoaded = false;
+  // Listen for the Qualtrics loaded event
+window.addEventListener("qsi_js_loaded", interceptLoaded, false);
+
+  function interceptLoaded() {
+    if (QSI.API) {
+      hasInterceptLoaded = true;
+      console.log("Qualtrics Intercept has loaded and is ready.");
+        console.log(hasInterceptLoaded);
+    } else {
+      hasInterceptLoaded = false;
+      console.warn("Qualtrics API not available.");
+    }
+  }
+
+  // Function to run the intercept 
+  function runIntercept() {
+    if (hasInterceptLoaded) {
+      QSI.API.run();
+      console.log("hasInterceptLoaded");
+        console.log(hasInterceptLoaded);
+    }
+  }
+
+ // This should be triggered by your app when a user navigates to a section, e.g., "Feedback"
+
+   function feedbackTabClicked() {
+    
+      if (hasInterceptLoaded) {
+     
+      // First unload any previous intercepts
+      QSI.API.unload();
+      // Then load the new intercept and run it when ready
+      QSI.API.load().done(runIntercept);
+        console.log("all done");
+    
+    } 
+  } 
+
+        function createSurveyDivAndTrigger() {
+    // Check if the div already exists
+    if (!document.getElementById("s2bLendingQSISurvey")) {
+      const newDiv = document.createElement("div");
+      newDiv.id = "s2bLendingQSISurvey";
+      document.getElementById("survey-container").appendChild(newDiv);
+      console.log("🆕 Created div with id='s2bLendingQSISurvey'");
+    } else {
+      console.log("⚠️ Div already exists. Skipping creation.");
+    }
+
+    // Now that the div is in place, call the intercept function
+   const url = new URL(window.location.href);
+
+    // Only add the parameter if it's not already there
+    if (!url.searchParams.has("feedback")) {
+      url.searchParams.append("feedback", "true");
+      window.history.replaceState({}, '', url);
+    }
+
+    // Optional: Do other things here, like creating a div or logging
+    console.log("URL updated and feedback parameter added.");
+  }
+  }
+ 
+</script>
+
+
+</body>
+</html>

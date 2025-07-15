@@ -110,48 +110,7 @@ try{(new g("https://znw0niprt1yzwyrih-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
 
 <!--END WEBSITE FEEDBACK SNIPPET-->
     
-<script>
 
-//let hasInterceptLoaded = false;
-  // Listen for the Qualtrics loaded event
-window.addEventListener("qsi_js_loaded", interceptLoaded, false);
-
-  function interceptLoaded() {
-    if (QSI.API) {
-      hasInterceptLoaded = true;
-      console.log("Qualtrics Intercept has loaded and is ready.");
-        console.log(hasInterceptLoaded);
-    } else {
-      hasInterceptLoaded = false;
-      console.warn("Qualtrics API not available.");
-    }
-  }
-
-  // Function to run the intercept 
-  function runIntercept() {
-    if (hasInterceptLoaded) {
-      QSI.API.run();
-      console.log("hasInterceptLoaded");
-        console.log(hasInterceptLoaded);
-    }
-  }
-
- // This should be triggered by your app when a user navigates to a section, e.g., "Feedback"
-
-   function feedbackTabClicked() {
-       alert("1st");
-      if (hasInterceptLoaded) {
-          alert("2nd");
-      // First unload any previous intercepts
-      QSI.API.unload();
-      // Then load the new intercept and run it when ready
-      QSI.API.load().done(runIntercept);
-        console.log("all done");
-           alert("done");
-    } 
-  } 
- 
-</script>
 
 
     <header>
@@ -184,7 +143,8 @@ window.addEventListener("qsi_js_loaded", interceptLoaded, false);
                 <div class="creative">
                     <h3>Feedback Button</h3>
                     <p>A mobile responsive icon that helps capture page-level feedback.</p>
-                    <button id="feedback_button" onclick = "feedbackTabClicked()" class="feedback_button">View Button Example</button>
+                    <button id="feedback_button" class="feedback_button">View Button Example</button>
+                
                     <button>View Slider Example</button>
                 </div>
 
@@ -261,15 +221,55 @@ window.addEventListener("qsi_js_loaded", interceptLoaded, false);
                 <div class="creative">
                     <h3>Pop Over</h3>
                     <p>An embedded window that overlays your page content.</p>
-                    <button id="hover_id_3" >Manually trigger</button>   
-                 
-                 <!-- <span id= "OnClick" onmouseover="console.log('Mouse over span'>HTML On Site</span>-->
-                                                                                                                                            
+                    <button id="hover_id_3" onclick="feedbackTabClicked()">Manually trigger</button>                                                                                                                                                
                 </div>
                 
             </div>
         </section>
     </main>
+
+    <script>
+
+//let hasInterceptLoaded = false;
+  // Listen for the Qualtrics loaded event
+window.addEventListener("qsi_js_loaded", interceptLoaded, false);
+
+  function interceptLoaded() {
+    if (QSI.API) {
+      hasInterceptLoaded = true;
+      console.log("Qualtrics Intercept has loaded and is ready.");
+        console.log(hasInterceptLoaded);
+    } else {
+      hasInterceptLoaded = false;
+      console.warn("Qualtrics API not available.");
+    }
+  }
+
+  // Function to run the intercept 
+  function runIntercept() {
+    if (hasInterceptLoaded) {
+      QSI.API.run();
+      console.log("hasInterceptLoaded");
+        console.log(hasInterceptLoaded);
+    }
+  }
+
+ // This should be triggered by your app when a user navigates to a section, e.g., "Feedback"
+
+   function feedbackTabClicked() {
+       alert("1st");
+      if (hasInterceptLoaded) {
+          alert("2nd");
+      // First unload any previous intercepts
+      QSI.API.unload();
+      // Then load the new intercept and run it when ready
+      QSI.API.load().done(runIntercept);
+        console.log("all done");
+           alert("done");
+    } 
+  } 
+ 
+</script>
 
 
 </body>

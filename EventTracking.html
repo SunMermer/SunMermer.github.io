@@ -136,11 +136,7 @@ window.addEventListener("qsi_js_loaded", interceptLoaded, false);
 
    function feedbackTabClicked() {
       if (hasInterceptLoaded === true) {
-      // First unload any previous intercepts
-      QSI.API.unload();
-      // Then load the new intercept and run it when ready
-      QSI.API.load().done(runIntercept);
-        console.log("all done");
+      QSI.API.run();
     } 
   } 
  

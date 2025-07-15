@@ -109,7 +109,42 @@ try{(new g("https://zn72uqafhhh9lfywy-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
 </script><div id='ZN_72uQaFHHH9lfYWy'><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
 
 <!--END WEBSITE FEEDBACK SNIPPET-->
+<script>
+  let hasInterceptLoaded = false;
+  // Listen for the Qualtrics loaded event
+window.addEventListener("qsi_js_loaded", interceptLoaded, false);
 
+  function interceptLoaded() {
+    if (QSI.API) {
+      hasInterceptLoaded = true;
+      console.log("Qualtrics Intercept has loaded and is ready.");
+    } else {
+      hasInterceptLoaded = false;
+      console.warn("Qualtrics API not available.");
+    }
+  }
+
+  // Function to run the intercept
+  function runIntercept() {
+    if (hasInterceptLoaded === true) {
+      QSI.API.run();
+      console.log("hasInterceptLoaded");
+    }
+  }
+
+ // This should be triggered by your app when a user navigates to a section, e.g., "Feedback"
+
+   function feedbackTabClicked() {
+      if (hasInterceptLoaded === true) {
+      // First unload any previous intercepts
+      QSI.API.unload();
+      // Then load the new intercept and run it when ready
+      QSI.API.load().done(runIntercept);
+        console.warn("all done");
+    } 
+  } 
+ 
+</script>
 
 
     <header>
@@ -229,41 +264,6 @@ try{(new g("https://zn72uqafhhh9lfywy-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
         </section>
     </main>
 
-        <script>
-  let hasInterceptLoaded = false;
-  // Listen for the Qualtrics loaded event
-window.addEventListener("qsi_js_loaded", interceptLoaded, false);
 
-  function interceptLoaded() {
-    if (QSI.API) {
-      hasInterceptLoaded = true;
-      console.log("Qualtrics Intercept has loaded and is ready.");
-    } else {
-      hasInterceptLoaded = false;
-      console.warn("Qualtrics API not available.");
-    }
-  }
-
-  // Function to run the intercept
-  function runIntercept() {
-    if (hasInterceptLoaded) {
-      QSI.API.run();
-        console.log("hasInterceptLoaded");
-    }
-  }
-
-         // This should be triggered by your app when a user navigates to a section, e.g., "Feedback"
-
-  function feedbackTabClicked() {
-    if (hasInterceptLoaded) {
-      // First unload any previous intercepts
-      QSI.API.unload();
-      QSI.API.resetIntercept();
-      // Then load the new intercept and run it when ready
-      QSI.API.load().done(runIntercept);
-        console.log("Done");
-    } 
-  }
-</script>
 </body>
 </html>

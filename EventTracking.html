@@ -231,13 +231,7 @@ try{(new g("https://zn72uqafhhh9lfywy-s2b.siteintercept.qualtrics.com/SIE/?Q_ZID
 
         <script>
   let hasInterceptLoaded = false;
-
   // Listen for the Qualtrics loaded event
- 
-//window.addEventListener("qsi_js_loaded", function () {
-  //console.log("✅ qsi_js_loaded event fired");
-//});
-
 window.addEventListener("qsi_js_loaded", interceptLoaded, false);
 
   function interceptLoaded() {
@@ -265,7 +259,6 @@ window.addEventListener("qsi_js_loaded", interceptLoaded, false);
       // First unload any previous intercepts
       QSI.API.unload();
       QSI.API.resetIntercept();
-
       // Then load the new intercept and run it when ready
       QSI.API.load().done(runIntercept);
         console.log("Done");

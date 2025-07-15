@@ -137,16 +137,19 @@ window.addEventListener("qsi_js_loaded", interceptLoaded, false);
   }
 
          // This should be triggered by your app when a user navigates to a section, e.g., "Feedback"
-  function feedbackTabClicked() {
-    if (hasInterceptLoaded) {
-      // First unload any previous intercepts
-      QSI.API.unload();
 
-      // Then load the new intercept and run it when ready
-      QSI.API.load().done(runIntercept);
-        console.warn("all done");
-    } 
-  }
+
+function feedbackTabClicked() {
+
+  QSI.API.unload();             // Reset any previous intercept
+  QSI.API.resetIntercept();     // Optional: allow it to show again
+  QSI.API.load().then(function () {
+    console.log("Intercept loaded – now running");
+    QSI.API.run();
+    console.warn("All done");
+  });
+}
+        
         
   // This should be triggered by your app when a user navigates to a section, e.g., "Feedback"
 
